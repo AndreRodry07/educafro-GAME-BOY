@@ -1,0 +1,217 @@
+/* Resetando as margens, preenchimento e o modelo de caixa para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilizando o corpo da página */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Estilizando o contêiner principal chamado "corpo" */
+.corpo {
+    position: relative;
+    width: 26vw;
+    height: 85vh;
+    border-radius: 9px 9px 60px 9px;
+    border: 3px solid #000;
+    background-color: #b6b6c1;
+    padding: 30px;
+}
+
+/* Estilizando a área chamada "tela" dentro do contêiner principal */
+.tela {
+    width: 100%;
+    height: 35vh;
+    border-radius: 10px;
+    position: relative;
+    background-color: #656f00;
+}
+
+/* Estilizando o LED na tela */
+.tela .led {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    bottom: 47%;
+    left: 2.6%;
+    border-radius: 70px;
+    background-color: #ba3725;
+}
+
+/* Estilizando a área de jogo dentro da tela */
+.tela .game {
+    height: 35vh;
+    width: 100%;
+    padding: 50px;
+    border-radius: 10px;
+    border: 25px solid #2f333a;
+    border-left: 40px solid #2f333a;
+}
+
+/* Estilizando o texto da classe "nome" */
+.nome {
+    color: #612648;
+    margin-top: 20px;
+}
+
+/* Estilizando o subtexto da classe "gb" dentro da classe "nome" */
+.nome .gb {
+    font-size: 1.7rem;
+}
+
+/* Estilizando a seção de controles */
+.controles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Estilizando a seta direcional */
+.seta-direcional {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilizando as setas horizontal e vertical */
+.seta-direcional div {
+    height: 32px;
+    width: 90px;
+    background-color: #2d2d2d;
+}
+
+.seta-direcional .horizontal {
+    transform: translate(-2px);
+}
+
+.seta-direcional .vertical {
+    transform: rotate(90deg) translateY(92px);
+}
+
+/* Estilizando a seção de botões */
+.botoes {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    height: 12vh;
+    width: 12vw;
+}
+
+/* Estilizando cada botão na seção de botões */
+.botoes .botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    height: 47px;
+    font-weight: 500;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #602646;
+}
+
+/* Ajustando a posição do botão B */
+.botao-b {
+    transform: translate(-60px, -30px);
+}
+
+/* Estilizando a seção de start e select */
+.start-select {
+    width: 14vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 25px;
+}
+
+/* Estilizando os botões start e select */
+.start-select .botao {
+    margin: 10px;
+    text-align: center;
+    transform: rotate(-18deg);
+}
+
+/* Estilizando a forma dos botões start e select */
+.start-select .botao .forma {
+    width: 60px;
+    height: 13px;
+    border-radius: 10px;
+    background-color: #6a7074;
+}
+
+.start-select .botao.start {
+    position: relative;
+    top: -7px;
+}
+
+/* Estilizando o texto dos botões start e select */
+.texto {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+/* Estilizando os alto-falantes */
+.speakers {
+    position: absolute;
+    bottom: -1%;
+    right: 13%;
+    transform: rotate(47deg) translateY(-49px);
+}
+
+/* Estilizando as linhas dos alto-falantes */
+.speakers .line {
+    width: 58px;
+    height: 13px;
+    margin: 6px;
+    border-radius: 20px;
+}
+
+.speakers .line-1,
+.speakers .line-2,
+.speakers .line-3 {
+    border: 2px solid black;
+}
+
+/* Estilos para telas de 1600px */
+@media screen and (max-width: 1600px) {
+    .corpo {
+        width: 27vw;
+        height: 89vh;
+    }
+    .start-select {
+        margin-top: 27px;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+}
+
+/* Estilos para telas de 947px */
+@media screen and (max-width: 947px) {
+    .corpo {
+        width: 56vw;
+        height: 89vh;
+    }
+
+    .botoes .botao {
+        width: 55px;
+        height: 55px;
+    }
+
+    .start-select {
+        width: 29vw;
+        height: 8vh;
+        margin-top: 22px;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+}
